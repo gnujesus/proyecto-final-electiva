@@ -1,0 +1,16 @@
+{
+  "name": "devops-cicd-practice",
+  "version": "1.0.0",
+  "description": "DevOps CI/CD Practice with GitHub",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["devops", "cicd", "github-actions"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^22.1.0"
+  }
+}
