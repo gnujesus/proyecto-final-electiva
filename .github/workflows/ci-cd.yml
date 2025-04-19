@@ -1,8 +1,9 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
     branches: [ main ]
+
   pull_request:
     branches: [ main ]
 
@@ -16,24 +17,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
+
         node-version: '18'
         
     - name: Install dependencies
       run: npm install
+
       
     - name: Run tests
       run: npm test
-      
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: .
-        branch: gh-pages
+
